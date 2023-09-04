@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+  --primary: #5ab177;
+  --light: #F3F4F5;
+  --dark: #282F34;
+  
+}
+
+
+.btnp {
+  margin-left: 100px !important;
+  color: #412e15;
+}
+
+
+.navbar-nav .nav-item {
+  margin-left: 10px;
+  
+}
+
+
+.navbar-nav a:hover {
+  color: #412e15 !important ;
+  font-weight: bolder;
+}
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #412e15;
+}
+
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #412e15;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+      display: block;
+      border: none;
+      margin-top: 0;
+      top: 150%;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+      top: 100%;
+      visibility: visible;
+      transition: .5s;
+      opacity: 1;
+  }
+}
+
+/*** Header ***/
+
+.banner2{
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../external/Images/Zoo-Main.jpg) no-repeat;
+  background-position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+   
+}
+
+.img-border {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+}
+
+.img-border::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 3rem;
+  bottom: 3rem;
+  border: 5px solid var(--primary);
+}
+
+.img-border img {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  object-fit: cover;
+}
+
+/*** Facts & Visiting Hours ***/
+.facts {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../external/Images/Brown-bear.jpg) center center no-repeat;
+  background-size: cover;
+  
+}
+
+.visiting-hours {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/bg-2.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.visiting-hours .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light);
+  background: rgba(0, 0, 0, .15);
+  border-color: rgba(255, 255, 255, .15);
+}
+
+.visiting-hours .table {
+  color: var(--light);
+  background: rgba(0, 0, 0, .15);
+}
+
+.visiting-hours .table td {
+  padding: .5rem 1rem;
+  border-color: rgba(255, 255, 255, .15);
+}
+
+.visiting-hours .table tr:last-child td {
+  border: none;
+}
+
+
+/*** Animal ***/
+.animal-item {
+  position: relative;
+  display: block;
+}
+
+.animal-item .animal-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px !important;
+  opacity: 0;
+  transition: .5s;
+}
+
+.animal-item:hover .animal-text {
+  opacity: 1;
+  padding-bottom: 20px !important;
+}
+
+/*** Events ***/
+
+.membership-item {
+  padding: 45px 30px;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, .7);
+}
+
+.membership-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.membership-item .display-1 {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--primary);
+}
+/*** Footer ***/
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../external/Images/parrot_2.jpg) center center no-repeat;
+  background-size: cover;
+}
+.footer .btn.btn-social {
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  border: 1px solid #FFFF;
+  transition: .3s;
+}
+.footer .btn.btn-social:hover {
+  color: #5ab177;
+}
+.footer .btn.btn-outline .real:hover {
+  color: #5ab177;
+}
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: .3s;
+  text-decoration: none;
+}
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+.footer .btn.btn-link:hover {
+  color: #5ab177;
+  letter-spacing: normal;
+  box-shadow: none;
+}
+
